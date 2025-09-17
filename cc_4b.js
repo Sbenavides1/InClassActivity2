@@ -10,16 +10,20 @@ let products = [
 ];
 
 // Category Discounts
-switch (category) {
+for (let product of products) {
+    switch (product.category) {
     case "Electronics":
-        discount = 0.10; // 10% discount
+        discount = 0.10;
         break;
     case "Furniture":
-        discount = 0.15; // 15% discount
+        discount = 0.15;
         break;
     case "Accessory":
-        discount = 0.05; // 5% discount
+        discount = 0.05;
         break;
     default:
-        discount = 0.00; // No discount
-}
+        discount = 0.00;
+        }
+    }
+
+// Customer Type Adjustments
