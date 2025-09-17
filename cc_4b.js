@@ -10,8 +10,16 @@ let products = [
 ];
 
 // Category Discounts
-let categoryDiscounts = {
-    "Electronics": 0.10, // 10% discount
-    "Furniture": 0.15,   // 15% discount
-    "Accessory": 0.05    // 5% discount
-};
+switch (category) {
+    case "Electronics":
+        discount = 0.10; // 10% discount
+        break;
+    case "Furniture":
+        discount = 0.15; // 15% discount
+        break;
+    case "Accessory":
+        discount = 0.05; // 5% discount
+        break;
+    default:
+        discount = 0.00; // No discount
+}
