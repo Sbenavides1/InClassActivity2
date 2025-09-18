@@ -49,5 +49,4 @@ if (customerType = "student") {
     discount = 0.00;
 }
 
-
-
+// Coupon Code Adjustment
