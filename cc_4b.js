@@ -11,6 +11,7 @@ let products = [
 
 // Category Discounts
 for (let product of products) {
+    let discount;
     switch (product.category) {
     case "Electronics":
         discount = 0.10;
@@ -26,4 +27,16 @@ for (let product of products) {
         }
     }
 
-// Customer Type Adjustments
+    let promoPrice = product.price * (1-discount);
+    product.promoPrice = promoPrice;
+
+// Customer Array
+let Customer = [
+    { id: 1, customerType: "regular", couponCode: "SAVE10", taxRate: 0.085,
+        cart: [{ sku: "001", qty: 2 }, { sku: "003", qty: 1 }] },
+    { id: 2, customerType: "student", couponCode: "STUDENTLIFE", taxRate: 0.085,
+        cart: [{ sku: "002", qty: 3 }, { sku: "001", qty: 4 }] },
+    { id: 3, customerType: "senior", couponCode: "SOMEDAY", taxRate: 0.085,
+        cart: [{sku: "005", qty: 2 }, {sku: "004", qty: 1 }] },
+    ]   
+
