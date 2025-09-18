@@ -40,3 +40,14 @@ let Customer = [
         cart: [{sku: "005", qty: 2 }, {sku: "004", qty: 1 }] },
     ]   
 
+// if/else Adjustment
+if (customerType = "student") {
+    discount += 0.05;
+} else if (customerType = "senior") {
+    discount += 0.07;
+} else {
+    discount = 0.00;
+}
+
+
+
